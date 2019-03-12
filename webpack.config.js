@@ -1,4 +1,7 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
+    // entry: ['babel-polyfill', './src/js/reducers/index'],
     module: {
         rules: [
             {
