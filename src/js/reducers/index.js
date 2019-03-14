@@ -1,34 +1,39 @@
 // src/js/reducers/index.js
 
-import { ENTER_ZIP } from '../constants/action-types';
+import { ENTER_ZIP, FETCH_DATA_ERROR, FETCH_DATA_SUCCESS, FETCH_DATA_SUBMITTING } from '../constants/action-types';
+
 
 const initialState = {
-    zip: 0,
     uvIndex: 0,
-    uvAlert: 0
+    uvAlert: 10,
+    submitting: false,
+    error: ''
 };
 
 function rootReducer(state = initialState, action) {
 
-    if (action.type === ENTER_ZIP) {
-        return Object.assign({}, state, {
-            zip: action.payload,
-            uvIndex: fetchData(action.payload.UV_INDEX),
-            uvAlert: fetchData(action.payload.UV_ALERT),
-        })
+    switch (action.type) {
+        case FETCH_DATA_SUBMITTING:
+            return {
+                ...state,
+                submitting: true
+            };
+        case FETCH_DATA_SUCCESS:
+            return {
+                ...state,
+                uvIndex: action.payload.uvIndex,
+                uvAlert: action.payload.uvAlert,
+                submitting: false,
+                error: ''
+            }
+        case FETCH_DATA_ERROR:
+            return {
+                ...state,
+                error: action.payload,
+                submitting: false
+            };
+        default:
+            return state;
     }
-    return state;
 };
-
-async function fetchData(){
-    try {
-        let response = await fetch(`https://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVDAILY/ZIP/${this.state.zip}/JSON`);
-        // let responseJSON = await response.json();
-        console.log(response);
-    } catch (error) {
-        alert(error);
-    }
-    return response;
-}
-
 export default rootReducer;

@@ -7,7 +7,7 @@ import { thisExpression } from '@babel/types';
 
 function mapDispatchToProps(dispatch) {
     return {
-        enterZIP: number => dispatch(enterZIP(number))
+        enterZIP: string => dispatch(enterZIP(string))
     };
 }
 
@@ -26,7 +26,7 @@ class ConnectedForm extends Component {
 
     handleChange = (e) => {
         this.setState({
-            [e.target.id]: parseInt(e.target.value)
+            [e.target.id]: e.target.value
         });
     }
 
@@ -40,11 +40,10 @@ class ConnectedForm extends Component {
         const { zip } = this.state;
         return (
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="number">Enter ZIP</label>
+                <label htmlFor="string">Enter ZIP</label>
                 <input
-                    type="number"
+                    type="string"
                     id="zip"
-                    min="0"
                     value={zip}
                     onChange={this.handleChange}
                 />
