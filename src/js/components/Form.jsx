@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { enterZIP } from '../actions/index';
+import { enterZIP, getLocation } from '../actions/index';
 import { thisExpression } from '@babel/types';
 
 function mapDispatchToProps(dispatch) {
     return {
-        enterZIP: string => dispatch(enterZIP(string))
+        enterZIP: string => dispatch(enterZIP(string)),
+        getLocation: string => dispatch(getLocation(string)),
     };
 }
 
@@ -34,6 +35,7 @@ class ConnectedForm extends Component {
         e.preventDefault();
         const { zip } = this.state;
         this.props.enterZIP(zip);
+        this.props.getLocation(zip);
     }
 
     render() {
