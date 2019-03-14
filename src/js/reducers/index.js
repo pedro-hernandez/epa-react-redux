@@ -11,7 +11,6 @@ const initialState = {
 };
 
 function rootReducer(state = initialState, action) {
-
     switch (action.type) {
         case FETCH_DATA_SUBMITTING:
             return {

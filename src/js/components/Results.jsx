@@ -13,7 +13,6 @@ const connectedResults = ({ uvIndex, uvAlert, submitting, error }) => (
             <p>UV INDEX: {uvIndex}</p>
             <p>UV ALERT: {uvAlert}</p>
         </div>
-        {/* {submitting ? <div>`...submitting`</div> : null} */}
         {submitting && <div>Submitting...</div>}
         {error && <div>{error}</div>}
     </Fragment>
