@@ -41,20 +41,20 @@ class ConnectedForm extends Component {
     render() {
         const { zip } = this.state;
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label htmlFor="string">Enter ZIP</label>
+            <form className="zip-form" onSubmit={this.handleSubmit}>
+                <label htmlFor="string">Enter ZIP Code:</label>
                 <input
+                    className="zip-input"
                     type="string"
                     id="zip"
                     value={zip}
                     onChange={this.handleChange}
                 />
                 <div>
-                    <button type="submit">
+                    <button className="zip-button" type="submit">
                         Get UV Index
                     </button>
                 </div>
-
             </form>
         );
     }
