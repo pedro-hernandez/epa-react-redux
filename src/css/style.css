@@ -59,3 +59,14 @@ body {
     margin-top: 10px;
     font-weight: 600;
 }
+
+.result {
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: navy;
+}
+
+.error {
+    color: red;
+}

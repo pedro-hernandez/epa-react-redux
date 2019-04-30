@@ -17,8 +17,8 @@ const connectedResults = ({ uvIndex, uvAlert, submitting, error, city, usState }
             <div className="results-label">UV ALERT:</div>
             <div className="result">{uvAlert}</div>
         </div>
-        {submitting && <div>Submitting...</div>}
-        {error && <div>{error}</div>}
+        {submitting && <div className="results results-label">Submitting...</div>}
+        {error && <div className="results results-label error">{error}</div>}
     </Fragment>
 )
 
