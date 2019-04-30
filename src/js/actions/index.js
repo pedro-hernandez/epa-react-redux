@@ -16,7 +16,7 @@ export function enterZIP(zip) {
             }));
         } catch (e) {
             // console.log(JSON.stringify(e));
-            dispatch(error(e.responseText || `Something went wrong...`));
+            dispatch(error(e.responseText || `Oops, something went wrong...`));
         }
     }
 };
