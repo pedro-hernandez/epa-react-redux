@@ -5,7 +5,7 @@ import { ENTER_ZIP, FETCH_DATA_ERROR, FETCH_DATA_SUCCESS, FETCH_DATA_SUBMITTING,
 
 const initialState = {
     uvIndex: 0,
-    uvAlert: 10,
+    uvAlert: 0,
     city: '',
     usState: '',
     submitting: false,

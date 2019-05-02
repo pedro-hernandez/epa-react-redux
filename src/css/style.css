@@ -67,6 +67,19 @@ body {
     color: navy;
 }
 
+/* .fade-in {
+    animation: fade-in 1.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
+
 .error {
     color: red;
 }
