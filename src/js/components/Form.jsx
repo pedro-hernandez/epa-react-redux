@@ -45,6 +45,7 @@ class ConnectedForm extends Component {
                 <label htmlFor="string">Enter ZIP Code:</label>
                 <input
                     className="zip-input"
+                    autofocus="autofocus"
                     type="string"
                     id="zip"
                     value={zip}

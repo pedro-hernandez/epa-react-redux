@@ -4,8 +4,8 @@ import { ENTER_ZIP, FETCH_DATA_ERROR, FETCH_DATA_SUCCESS, FETCH_DATA_SUBMITTING,
 
 
 const initialState = {
-    uvIndex: -1,
-    uvAlert: -1,
+    uvIndex: null,
+    uvAlert: null,
     city: '',
     usState: '',
     submitting: false,

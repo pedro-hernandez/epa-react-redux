@@ -13,9 +13,9 @@ const connectedResults = ({ uvIndex, uvAlert, submitting, error, city, usState }
             <div className="results-label">Location:</div>
             {city && <div className="result">{city}, {usState}</div>}
             <div className="results-label">UV INDEX:</div>
-            {uvIndex != -1 && <div className="result">{uvIndex}</div>}
+            {uvIndex != null && <div className="result">{uvIndex}</div>}
             <div className="results-label">UV ALERT:</div>
-            {uvAlert != -1 && <div className="result">{uvAlert}</div>}
+            {uvAlert != null && <div className="result">{uvAlert}</div>}
         </div>
         {submitting && <div className="results results-label">Submitting...</div>}
         {error && <div className="results results-label error">{error}</div>}
