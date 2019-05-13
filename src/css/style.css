@@ -61,10 +61,10 @@ body {
     display: block;
     width: 40%;
     margin: 20px auto;
-    background: blue;
-    border: 1px solid blue;
+    background: #0984f0;
+    /* border: 1px solid blue; */
     border-radius: 4px;
-    padding: 4px;
+    padding: 8px;
     font-size: 20px;
     color: #fff;
 }
@@ -84,7 +84,7 @@ body {
     margin: 10px 0;
     font-size: 30px;
     font-weight: 600;
-    color: navy;
+    color: #0984f0;
 }
 
 /* .fade-in {
