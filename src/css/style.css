@@ -7,10 +7,30 @@ body {
     flex-direction: column;
     width: 30%;
     margin: 40px auto;
-    padding: 10px 0 30px 0;
+    /* padding: 10px 0 30px 0;
     background: #f5f5f5;
     border: 1px solid #f5f5f5;
-    border-radius: 12px;
+    border-radius: 12px; */
+    /* box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.card-header {
+    background: #f05e09;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 5px solid #bb4b0a;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
 

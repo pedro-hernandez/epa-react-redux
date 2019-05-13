@@ -7,9 +7,13 @@ import "../../css/style.css";
 
 const App = () => (
     <div className="container">
+        <div className="card-header">
         <h1 className="h1">EPA UV Index Finder</h1>
+        </div>
+        <div className="card-content">
         <Form />
         <Results />
+        </div>
     </div>
 )
 
