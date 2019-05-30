@@ -9,13 +9,11 @@ export function enterZIP(zip) {
         try {
             const response = await fetch(`https://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVDAILY/ZIP/${zip}/JSON`);
             const responseJSON = await response.json();
-            // console.log(responseJSON[0]);
             dispatch(success({
                 uvIndex: responseJSON[0].UV_INDEX,
                 uvAlert: responseJSON[0].UV_ALERT
             }));
         } catch (e) {
-            // console.log(JSON.stringify(e));
             dispatch(error(e.responseText || `Oops, something went wrong...`));
         }
     }
@@ -28,13 +26,11 @@ export function getLocation(zip) {
         try {
             const response = await fetch(`http://ziptasticapi.com/${zip}`);
             const responseJSON = await response.json();
-            // console.log(responseJSON[0]);
             dispatch(locSuccess({
                 city: responseJSON.city,
                 state: responseJSON.state
             }));
         } catch (e) {
-            // console.log(JSON.stringify(e));
             dispatch(locError(e.responseText || `Something went wrong...`));
         }
     }
