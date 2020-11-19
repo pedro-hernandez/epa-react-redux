@@ -2,12 +2,15 @@
 
 import { ENTER_ZIP } from '../constants/action-types';
 
+// Hacky workaround to CORS error in browser from
+// https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
+
 export function enterZIP(zip) {
     return async function(dispatch){
         console.log(zip);
         dispatch(submitting())
         try {
-            const response = await fetch(`https://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVDAILY/ZIP/${zip}/JSON`);
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/https://enviro.epa.gov/enviro/efservice/getEnvirofactsUVDAILY/ZIP/${zip}/JSON`);
             const responseJSON = await response.json();
             dispatch(success({
                 uvIndex: responseJSON[0].UV_INDEX,
